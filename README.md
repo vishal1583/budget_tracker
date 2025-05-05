@@ -7,3 +7,8 @@ A simple and intuitive budget tracker app built with Flutter. This app helps use
 - **Track Expenses**: Add, edit, and delete expenses to stay on top of your spending.
 - **Budget Overview**: View your expenses and income for different categories.
 - **Expense Categories**: Assign each income and expense to a category for better organization.
+
+## Screenshots
+
+![Main Page](screen_shot/main_page.png)
+![](screen_shot/transaction_page.png)
