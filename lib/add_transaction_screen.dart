@@ -77,7 +77,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     }
                   },
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 25),
                 // Radio Button
                 RadioListTile<String>(
                   title: Text('Income'),
@@ -89,6 +89,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                     });
                   },
                 ),
+                const SizedBox(height: 3),
                 RadioListTile<String>(
                   title: Text('Expense'),
                   value: 'expense',
@@ -107,18 +108,18 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                         children: [
                           ElevatedButton(
                             onPressed: () {
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
+                            },
+                            child: Text('Cancel'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
                               if (_key.currentState!.validate()) {
                                 addTransaction(context);
                               }
                             },
                             child: Text('Submit'),
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
-                            },
-                            child: Text('Cancel'),
-                          )
                         ],
                       )
               ],
